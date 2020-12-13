@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Web Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h3 th:text="'The following pages contain the text &quot;' + ${searchForm.text} + '&quot;'"/>
+
+<table>
+    <tbody>
+    <tr th:each="url : ${urls}">
+        <td><a target="_blank" th:href="${url}" th:text="${url}"/></td>
+    </tr>
+    </tbody>
+</table>
+
+<h3><a href="/">New search</a></h3>
+
+
+</body>
+</html>

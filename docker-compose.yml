@@ -1,0 +1,10 @@
+version: '3'
+services:
+  websearch:
+    build: .
+    ports:
+      - "8080:8080"
+  db:
+    image: "postgres:11.1-alpine"
+    volumes:
+      - ./init_db.sh:/docker-entrypoint-initdb.d/init_db.sh

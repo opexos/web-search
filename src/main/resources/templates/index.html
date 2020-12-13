@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Web Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<h3>Web search</h3>
+
+<form action="#" th:action="@{/search}" th:object="${searchForm}" method="post">
+    <p>Input text: <input type="text" th:field="*{text}"/></p>
+    <p><input type="submit" value="Search"/> <input type="reset" value="Reset"/></p>
+</form>
+
+<br>
+<br>
+<h4><a href="/swagger-ui.html">Show API documentation</a></h4>
+
+</body>
+</html>
